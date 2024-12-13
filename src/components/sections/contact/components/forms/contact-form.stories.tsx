@@ -1,21 +1,20 @@
+import { ContactForm } from '@/components/sections/contact/components/forms/contact-form';
 import { CenterDecorator, withToast } from '@/ui/decorators';
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
-import { ContactSection } from './index.js';
-
 // Define metadata for the component
-const meta: Meta<typeof ContactSection> = {
+const meta: Meta<typeof ContactForm> = {
   title: 'Sections/Contact', // Title path in Storybook
-  component: ContactSection, // Link the component to the story
+  component: ContactForm, // Link the component to the story
 };
 
 export default meta;
 
-type Story = StoryObj<typeof ContactSection>;
+type Story = StoryObj<typeof ContactForm>;
 
 // Define a story with args
-export const ContactFormSection: Story = {
+export const PortfolioContactForm: Story = {
   decorators: [CenterDecorator, withToast],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

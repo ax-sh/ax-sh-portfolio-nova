@@ -40,6 +40,7 @@ const TextAreaField = React.forwardRef<HTMLTextAreaElement, ComponentPropsWithRe
 );
 // Set the displayName for better debugging
 TextAreaField.displayName = 'Textarea';
+
 export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormData> }) {
   const {
     register,
