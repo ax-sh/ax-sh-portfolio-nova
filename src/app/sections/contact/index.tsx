@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import type { SubmitHandler } from "react-hook-form";
-
+import toast from "react-hot-toast";
 import {
 	ContactForm,
 	type ContactFormData,
@@ -11,6 +11,7 @@ export function ContactSection() {
 	const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
 		console.log(data, "ContactSection submit"); // Type-safe access to form data
 		await new Promise((r) => setTimeout(r, 2000));
+		toast.success("Successfully sent!");
 	};
 
 	return (

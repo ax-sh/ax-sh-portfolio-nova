@@ -1,9 +1,6 @@
 import clsx from "clsx";
-import React, {
-	InputHTMLAttributes,
-	TextareaHTMLAttributes,
-	forwardRef,
-} from "react";
+import type { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
+import React from "react";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 	type?: "text" | "email" | "password" | "number";
@@ -15,7 +12,7 @@ type FormFieldProps = (InputProps | TextAreaProps) & {
 	variant?: "input" | "textarea";
 };
 
-const FormField = forwardRef<
+const FormField = React.forwardRef<
 	HTMLInputElement | HTMLTextAreaElement,
 	FormFieldProps
 >(({ variant = "input", ...props }, ref) => {

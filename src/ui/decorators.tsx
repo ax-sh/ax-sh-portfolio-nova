@@ -1,8 +1,10 @@
 import type { Decorator } from "@storybook/react";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 export const withToast: Decorator = (Story) => (
 	<div>
+		<Toaster />
 		<Story />
 	</div>
 );
