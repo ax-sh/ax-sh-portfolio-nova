@@ -19,8 +19,8 @@ export function ContactSection() {
 			<div
 				className={clsx(
 					"flex justify-center items-center",
-					"h-[calc(100vh/2)] [&>*]:flex-grow ",
-					"w-1/2 m-auto ",
+					"h-[calc(100vh/2)] [&>*]:flex-grow",
+					"w-1/2 m-auto",
 				)}
 			>
 				<ContactForm onSubmit={onSubmit} />
