@@ -3,8 +3,8 @@ import type { SubmitHandler } from "react-hook-form";
 
 import {
 	ContactForm,
-	ContactFormData,
-} from "./components/forms/contact-form.jsx";
+	type ContactFormData,
+} from "@/ui/sections/contact/components/forms/contact-form";
 
 export function ContactSection() {
 	const onSubmit: SubmitHandler<ContactFormData> = async (data) => {

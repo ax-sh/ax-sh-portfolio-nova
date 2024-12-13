@@ -1,8 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import clsx from "clsx";
-import React, { InputHTMLAttributes } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import type { InputHTMLAttributes } from "react";
+import { type SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
+import React from "react";
 
 const contactFormSchema = z.object({
 	name: z.string().min(1, "Name is required"), // Non-empty string validation
@@ -12,6 +13,7 @@ const contactFormSchema = z.object({
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 
+// eslint-disable-next-line react/display-name
 const TextField = React.forwardRef<
 	HTMLInputElement,
 	InputHTMLAttributes<HTMLInputElement>
@@ -60,6 +62,7 @@ export function ContactForm({
 	// console.log(Object.values(errors).map((i) => i.message));
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={"flex flex-col gap-2"}>
+			{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 			<label className="text-sm font-medium text-gray-700 flex flex-col gap-2">
 				<span>Name</span>
 				<TextField
@@ -72,6 +75,7 @@ export function ContactForm({
 				)}
 			</label>
 
+			{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 			<label className="text-sm font-medium text-gray-700 flex flex-col gap-2">
 				<span>Email</span>
 
@@ -84,6 +88,7 @@ export function ContactForm({
 					<span className={"text-red-500"}>{errors.email.message}</span>
 				)}
 			</label>
+			{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 			<label className="text-sm font-medium text-gray-700 flex flex-col gap-2">
 				<span>Message</span>
 
