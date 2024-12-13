@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     // '@storybook/addon-a11y',
     // '@storybook/addon-storysource',
     '@storybook/test-runner',
-    // 'storybook-addon-pseudo-states',
+    'storybook-addon-pseudo-states',
   ],
   framework: {
     name: '@storybook/react-vite',
