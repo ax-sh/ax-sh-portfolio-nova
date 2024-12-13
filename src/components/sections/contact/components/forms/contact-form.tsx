@@ -71,6 +71,7 @@ export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormD
         <span>Email</span>
 
         <TextField
+          type='email'
           placeholder={'Email'}
           {...register('email')}
           className={clsx(errors.email ? 'border-red-500' : 'border-gray-300')}
