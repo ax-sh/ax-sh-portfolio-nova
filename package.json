@@ -14,7 +14,9 @@
     "test-storybook": "test-storybook",
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write",
-    "pretty": "pretty-quick"
+    "pretty": "pretty-quick",
+    "cl": "nr git-cliff -u --strip all",
+    "clean": "rimraf .next out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -29,6 +31,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "git-cliff": "^2.6.1",
     "@biomejs/biome": "^1.9.4",
     "@eslint/eslintrc": "^3.2.0",
     "@storybook/addon-a11y": "^8.4.7",
