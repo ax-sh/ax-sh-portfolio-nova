@@ -11,6 +11,7 @@
     "format": "nlx @biomejs/biome format --write ./src",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@storybook/react-vite": "^8.4.7",
@@ -26,6 +27,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
+    "msw": "^2.6.8",
+    "msw-storybook-addon": "^2.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
