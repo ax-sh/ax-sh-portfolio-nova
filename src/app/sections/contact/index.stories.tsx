@@ -1,8 +1,7 @@
-import type { Decorator, Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, waitFor, within } from "@storybook/test";
 
 import { ContactSection } from "./index.js";
-import React from "react";
 
 // Define metadata for the component
 const meta: Meta<typeof ContactSection> = {
@@ -12,20 +11,13 @@ const meta: Meta<typeof ContactSection> = {
 
 export default meta;
 
-const CenterDecorator: Decorator = (Story) => (
-	<div
-		className={
-			"flex justify-center items-center h-dvh [&>*]:flex-grow w-1/2 m-auto"
-		}
-	>
-		<Story />
-	</div>
-);
+import { CenterDecorator, withToast } from "@/ui/decorators";
+
 type Story = StoryObj<typeof ContactSection>;
 
 // Define a story with args
-export const Primary: Story = {
-	decorators: [CenterDecorator],
+export const ContactForm: Story = {
+	decorators: [CenterDecorator, withToast],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		// Type into the name input field
