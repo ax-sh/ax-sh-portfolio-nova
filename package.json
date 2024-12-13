@@ -8,9 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "dev:turbo": "bun --bun run dev",
-    "format": "nlx @biomejs/biome format --write ./src"
+    "format": "nlx @biomejs/biome format --write ./src",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
   },
   "dependencies": {
+    "@storybook/react-vite": "^8.4.7",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
