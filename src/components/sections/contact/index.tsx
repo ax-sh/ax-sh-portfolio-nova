@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import {
 	ContactForm,
 	type ContactFormData,
-} from "@/app/sections/contact/components/forms/contact-form";
+} from "@/components/sections/contact/components/forms/contact-form";
 
 export function ContactSection() {
 	const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
