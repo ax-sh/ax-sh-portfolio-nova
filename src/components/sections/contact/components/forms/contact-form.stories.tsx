@@ -47,7 +47,7 @@ export const PortfolioContactForm: Story = {
       expect(submitButton).toBeDisabled();
       expect(submitButton).toHaveTextContent(/sending/i);
       // Optionally check for error alert or message
-      // expect(canvas.getByText(/failed to send message/i)).toBeInTheDocument();
+      // expect(canvas.getByText(/Successfully sent!/i)).toBeInTheDocument();
     });
     // await expect(submitButton).toHaveValue("doing")
     // Ensure the form is submitting
