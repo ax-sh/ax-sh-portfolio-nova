@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
-import type { InputHTMLAttributes } from 'react';
+import type { ComponentPropsWithRef, InputHTMLAttributes } from 'react';
 import React from 'react';
 import { type SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -27,18 +27,19 @@ const TextField = React.forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInp
   }
 );
 
-const TextAreaField = React.forwardRef<
-  HTMLTextAreaElement,
-  InputHTMLAttributes<HTMLTextAreaElement>
->((props, ref) => {
-  return (
-    <textarea
-      ref={ref} // Attach the ref
-      {...props}
-      className={clsx('block w-full px-3 py-2 border rounded-md shadow-sm', props.className)}
-    />
-  );
-});
+const TextAreaField = React.forwardRef<HTMLTextAreaElement, ComponentPropsWithRef<'textarea'>>(
+  (props, ref) => {
+    return (
+      <textarea
+        ref={ref} // Attach the ref
+        {...props}
+        className={clsx('block w-full px-3 py-2 border rounded-md shadow-sm', props.className)}
+      />
+    );
+  }
+);
+// Set the displayName for better debugging
+TextAreaField.displayName = 'Textarea';
 export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormData> }) {
   const {
     register,
@@ -47,7 +48,7 @@ export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormD
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     mode: 'onBlur', // Validate on field blur
-  }); // Use the interface for type-safe form methods
+  });
 
   // console.log(watch('email')); // watch input value by passing the name of it
   // console.log(Object.values(errors).map((i) => i.message));
