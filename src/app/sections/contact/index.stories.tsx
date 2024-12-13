@@ -1,7 +1,8 @@
-import { Meta, StoryFn, StoryObj } from "@storybook/react";
+import type { Decorator, Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, waitFor, within } from "@storybook/test";
 
-import { ContactSection } from "./index.jsx";
+import { ContactSection } from "./index.js";
+import React from "react";
 
 // Define metadata for the component
 const meta: Meta<typeof ContactSection> = {
@@ -11,7 +12,7 @@ const meta: Meta<typeof ContactSection> = {
 
 export default meta;
 
-const CenterDecorator = (Story: StoryFn) => (
+const CenterDecorator: Decorator = (Story) => (
 	<div
 		className={
 			"flex justify-center items-center h-dvh [&>*]:flex-grow w-1/2 m-auto"

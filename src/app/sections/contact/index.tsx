@@ -1,10 +1,11 @@
+"use client";
 import clsx from "clsx";
 import type { SubmitHandler } from "react-hook-form";
 
 import {
 	ContactForm,
 	type ContactFormData,
-} from "@/ui/sections/contact/components/forms/contact-form";
+} from "@/app/sections/contact/components/forms/contact-form";
 
 export function ContactSection() {
 	const onSubmit: SubmitHandler<ContactFormData> = async (data) => {

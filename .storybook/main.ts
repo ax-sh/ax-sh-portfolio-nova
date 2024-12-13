@@ -5,12 +5,12 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-onboarding',
     '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
-    '@storybook/addon-storysource',
+    // '@chromatic-com/storybook',
+    // '@storybook/addon-interactions',
+    // '@storybook/addon-a11y',
+    // '@storybook/addon-storysource',
     '@storybook/test-runner',
-    'storybook-addon-pseudo-states',
+    // 'storybook-addon-pseudo-states',
   ],
   framework: {
     name: '@storybook/react-vite',

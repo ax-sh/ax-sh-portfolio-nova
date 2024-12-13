@@ -1,5 +1,5 @@
 import { Footer } from "@/ui/footer";
-import { ContactSection } from "@/ui/sections/contact";
+import { ContactSection } from "@/app/sections/contact";
 
 export default function Home() {
 	return (
