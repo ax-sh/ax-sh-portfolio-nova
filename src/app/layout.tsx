@@ -2,6 +2,7 @@ import Layout from '@/ui';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import './globals.css';
 
@@ -24,7 +25,10 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Layout>{children}</Layout>
+        <Layout>
+          <Toaster />
+          {children}
+        </Layout>
       </body>
     </html>
   );
