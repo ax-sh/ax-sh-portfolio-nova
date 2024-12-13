@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export function WorkSection() {
+export default function WorkSection() {
   return (
     <section
       className={clsx(
