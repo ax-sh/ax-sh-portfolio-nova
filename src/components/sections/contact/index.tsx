@@ -10,7 +10,7 @@ import {
 export function ContactSection() {
 	const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
 		console.log(data, "ContactSection submit"); // Type-safe access to form data
-		await new Promise((r) => setTimeout(r, 2000));
+		await new Promise((r) => setTimeout(r, 1000));
 		toast.success("Successfully sent!");
 	};
 
