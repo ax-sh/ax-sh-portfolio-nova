@@ -19,3 +19,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  /* Hero Image */
+  .card-fader:nth-child(odd) {
+    @apply animate-fade-left;
+    animation-iteration-count: infinite;
+  }
+  .card-fader:nth-child(even) {
+    @apply animate-fade-right;
+    animation-iteration-count: infinite;
+  }
+  .card-fader:is(:nth-child(3), :nth-child(4)) {
+    animation-delay: 750ms;
+  }
+  .card-fader:is(:nth-child(5), :nth-child(6)) {
+    animation-delay: 1500ms;
+  }
+  .card-fader:is(:nth-child(7), :nth-child(8)) {
+    animation-delay: 2250ms;
+  }
+  /* Hero Image */
+}

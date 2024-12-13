@@ -14,6 +14,20 @@ export default {
         foreground: 'var(--foreground)',
       },
     },
+    keyframes: {
+      'fade-left': {
+        from: { transform: 'scale(1) translateX(0)', opacity: '1' },
+        to: { transform: 'scale(0.8) translateX(-30%)', opacity: '0' },
+      },
+      'fade-right': {
+        from: { transform: 'scale(1) translateX(0)', opacity: '1' },
+        to: { transform: 'scale(0.8) translateX(30%)', opacity: '0' },
+      },
+    },
+    animation: {
+      'fade-left': 'fade-left 3s ease-in-out',
+      'fade-right': 'fade-right 3s ease-in-out',
+    },
   },
   plugins: [],
 } satisfies Config;
