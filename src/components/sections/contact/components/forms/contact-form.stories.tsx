@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 
 // Define metadata for the component
 const meta: Meta<typeof ContactForm> = {
-  title: 'Sections/Contact', // Title path in Storybook
+  title: 'Portfolio/Form/Contact', // Title path in Storybook
   component: ContactForm, // Link the component to the story
 };
 
