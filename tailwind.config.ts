@@ -1,3 +1,5 @@
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -29,5 +31,5 @@ export default {
       'fade-right': 'fade-right 3s ease-in-out',
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [typography, forms],
 } satisfies Config;

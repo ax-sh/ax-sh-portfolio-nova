@@ -1,22 +1,22 @@
 'use client';
 
 import { ImageContain } from '@/ui';
-import clsx, { ClassValue } from 'clsx';
+import clsx from 'clsx';
 import type { PropsWithChildren } from 'react';
 
 function HeroImage() {
-  const a: ClassValue = 'row-spa' satisfies ClassValue;
+  const className = clsx('card-fader');
   return (
     <>
       <ImageContain src='/hero-image.svg' alt='hero' className='z-10' />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
-      <ImageContain src='/hero-image.svg' alt='shadow' className={clsx('card-fader', a)} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
+      <ImageContain src='/hero-image.svg' alt='shadow' className={className} />
     </>
   );
 }
@@ -36,7 +36,7 @@ function Hero({ children }: PropsWithChildren) {
         // stretched container
         className={clsx(
           'flex flex-col w-full self-stretch basis-1/2',
-          'md:grow relative ',
+          'md:grow relative',
           'duration-150 z-20'
         )}
       >
@@ -57,7 +57,9 @@ export default function HeroSection() {
           'w-1/2 m-auto'
         )}
       >
-        <h1>Axmin Shrestha</h1>
+        <header>
+          <h1>Axmin Shrestha</h1>
+        </header>
       </article>
     </Hero>
   );
