@@ -33,9 +33,11 @@ function Hero({ children }: PropsWithChildren) {
         <HeroImage />
       </div>
       <div
+        // stretched container
         className={clsx(
           'flex flex-col w-full self-stretch basis-1/2',
-          'md:grow duration-150 relative z-20'
+          'md:grow relative ',
+          'duration-150 z-20'
         )}
       >
         {children}
@@ -46,8 +48,17 @@ function Hero({ children }: PropsWithChildren) {
 
 export default function HeroSection() {
   return (
-    <>
-      <Hero>Hero</Hero>
-    </>
+    <Hero>
+      <article
+        className={clsx(
+          'prose prose-zinc prose-h1:text-red-500',
+          'flex justify-center items-center',
+          '[&>*]:flex-grow',
+          'w-1/2 m-auto'
+        )}
+      >
+        <h1>Axmin Shrestha</h1>
+      </article>
+    </Hero>
   );
 }

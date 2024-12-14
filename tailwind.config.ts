@@ -29,5 +29,5 @@ export default {
       'fade-right': 'fade-right 3s ease-in-out',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 } satisfies Config;
