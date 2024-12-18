@@ -15,7 +15,7 @@ export default function WorkSection() {
       <ProjectSection />
       <div className={'flex justify-end'}>
         <a href={'https://ax-sh.github.io/portfolio/'} target={'_blank'} rel={'noreferrer'}>
-          See More
+          <h6 className={'text-accent text-xl font-bold'}>See More</h6>
         </a>
       </div>
     </section>

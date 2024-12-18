@@ -4,7 +4,8 @@ import {
 } from '@/components/sections/work/hooks/use-projects-query';
 import clsx from 'clsx';
 
-function ProjectCard({ id, color, image }: ProjectProps) {
+function ProjectCard({ color, image, name, ...rest }: ProjectProps) {
+  console.log('ProjectCard', rest);
   return (
     <article
       className={
@@ -19,10 +20,10 @@ function ProjectCard({ id, color, image }: ProjectProps) {
           'p-3',
           'bg-gradient-to-t from-black/80 to-transparent',
           'grid items-end',
-          'prose prose-h6:text-red-500'
+          'prose prose-h6:text-secondary prose-h6:text-xl max-w-prose'
         )}
       >
-        <h6>{id}</h6>
+        <h6>{name}</h6>
       </div>
     </article>
   );
@@ -32,9 +33,9 @@ export function ProjectSection() {
   const { data: projects } = useProjectsQuery();
   return (
     <div className={clsx('grid grid-cols-3 gap-2 w-full py-3')}>
-      {projects.map((i) => (
-        <a key={i.id} href={i.url} target={'_blank'} rel={'noreferrer'}>
-          <ProjectCard {...i} />
+      {projects.map((project) => (
+        <a key={project.id} href={project.url} target={'_blank'} rel={'noreferrer'}>
+          <ProjectCard {...project} />
         </a>
       ))}
     </div>

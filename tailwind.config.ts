@@ -15,8 +15,8 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        accent: 'var(--accent)',
+        secondary: { DEFAULT: 'var(--secondary)' },
+        accent: { DEFAULT: 'var(--accent)' },
       },
     },
     keyframes: {

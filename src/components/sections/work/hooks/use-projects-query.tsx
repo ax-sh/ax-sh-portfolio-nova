@@ -8,7 +8,7 @@ function fetchProjects() {
       url: faker.internet.url(),
       color: faker.internet.color(),
       image: faker.image.url({ width: 500, height: 500 }),
-      name: faker.internet.displayName(),
+      name: faker.internet.displayName({ firstName: 'Jon', lastName: 'Doe' }),
     };
   }
   const data: ProjectProps[] = faker.helpers.multiple(gen, { count: 9 });
