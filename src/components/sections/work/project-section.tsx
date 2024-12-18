@@ -13,7 +13,11 @@ function ProjectCard({ color, image, name, ...rest }: ProjectProps) {
       }
       style={{ backgroundColor: color }}
     >
-      <img src={image} alt={image} className={'row-start-1 col-start-1'} />
+      <img
+        src={image}
+        alt={image}
+        className={'row-start-1 col-start-1 object-cover object-center'}
+      />
       <div
         className={clsx(
           'relative row-start-1 col-start-1',
