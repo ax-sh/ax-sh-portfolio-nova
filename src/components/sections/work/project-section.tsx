@@ -30,9 +30,14 @@ function ProjectCard({ color, image, name, ...rest }: ProjectProps) {
 }
 
 export function ProjectSection() {
-  const { data: projects } = useProjectsQuery();
+  const { data: projects, isLoading } = useProjectsQuery();
+  if (isLoading) {
+    return <div>loading</div>;
+  }
   return (
-    <div className={clsx('grid grid-cols-3 gap-2 w-full py-3')}>
+    <div
+      className={clsx('grid ', 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3', ' gap-3 w-full py-3')}
+    >
       {projects.map((project) => (
         <a key={project.id} href={project.url} target={'_blank'} rel={'noreferrer'}>
           <ProjectCard {...project} />

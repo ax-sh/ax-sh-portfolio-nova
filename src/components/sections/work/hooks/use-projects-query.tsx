@@ -18,5 +18,6 @@ function fetchProjects() {
 export function useProjectsQuery() {
   // TODO make use of react query later for fetching
   const data = fetchProjects();
-  return { data };
+  const isLoading = false;
+  return { data, isLoading };
 }

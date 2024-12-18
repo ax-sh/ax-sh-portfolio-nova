@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest run",
     "dev:turbo": "bun --bun run dev",
     "format": "nlx @biomejs/biome format --write ./src",
     "storybook": "storybook dev -p 6006",
@@ -71,7 +72,8 @@
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.1",
     "vite-plugin-qrcode": "^0.2.3",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
   },
   "msw": {
     "workerDirectory": [
