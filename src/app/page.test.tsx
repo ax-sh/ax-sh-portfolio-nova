@@ -1,4 +1,5 @@
-import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 
 import Home from './page';
 
@@ -13,7 +14,8 @@ test('adds 1 + 2 to equal 3', async () => {
 describe('Home Profile Page', () => {
   it('Should return the home page', () => {
     const ele = render(<Home />);
-    expect(ele).toBeInTheDocument();
+    expect(ele.getByRole('button')).toBeInTheDocument();
+    // screen.debug();
     // expect(e).tobeInThe(3);
   });
 });

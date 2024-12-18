@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    // ... Specify options here.
+    environment: 'happy-dom',
   },
   resolve: {
     alias: {

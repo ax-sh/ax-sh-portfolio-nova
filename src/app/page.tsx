@@ -4,7 +4,7 @@ import WorkSection from '@/components/sections/work';
 import { initMocks } from '@/mocks';
 import { Footer } from '@/ui/footer';
 
-initMocks().then();
+// initMocks().then();
 
 export default function Home() {
   return (

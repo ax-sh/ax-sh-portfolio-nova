@@ -62,6 +62,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "git-cliff": "^2.7.0",
+    "happy-dom": "^15.11.7",
     "is-ci": "^4.1.0",
     "msw": "^2.7.0",
     "msw-storybook-addon": "^2.0.4",
