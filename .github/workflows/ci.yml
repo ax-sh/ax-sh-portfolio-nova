@@ -1,22 +1,38 @@
 name: CI
+on: pull_request
 
-on:
-  workflow_run:
-    workflows: [ "setup-bun" ]
-    types:
-      - completed
+env:
+  PACKAGE_MANAGER: bun
 
 jobs:
-  setup-bun:
-    uses: ./.github/workflows/setup-bun.yml  # Reference to the parallel checks workflow
   check:
-    needs: setup-bun
-      # Only run if parallel checks passed
-     # if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    name: Setup Bun with cache
     runs-on: ubuntu-latest
+
     steps:
-        - name: Show Env
-          # run: echo "Env ${{ env.ENV_ID }}
-          run: echo "Env for ci website pr"
-        - name: lint
-          run: bun lint
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Setup ${{ env.PACKAGE_MANAGER }} Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: 💾 Restore Dependency Cache
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.bun/install/cache
+            .next/cache
+            node_modules
+          key: ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-
+
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: lint
+        run: bun lint
