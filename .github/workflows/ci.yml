@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  workflow_run:
+    workflows: [ "setup-bun" ]
+    types:
+      - completed
+
+jobs:
+  setup-bun:
+    uses: ./.github/workflows/setup-bun.yml  # Reference to the parallel checks workflow
+  check:
+    needs: setup-bun
+      # Only run if parallel checks passed
+     # if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+        - name: Show Env
+          # run: echo "Env ${{ env.ENV_ID }}
+          run: echo "Env for ci website pr"
+        - name: lint
+          run: bun lint

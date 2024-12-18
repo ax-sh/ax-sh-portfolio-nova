@@ -1,0 +1,16 @@
+name: setup-bun
+
+on:
+  workflow_call:  # Allows this workflow to be called from another workflow
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  install-bun:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️Checkout
+        uses: actions/checkout@v4
+      - name: Setup Bun.js ⚙️
+        uses: oven-sh/setup-bun@v2

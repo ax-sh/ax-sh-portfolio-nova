@@ -16,7 +16,10 @@
     "prettier:fix": "prettier . --write",
     "pretty": "pretty-quick",
     "cl": "nr git-cliff -u --strip all",
-    "clean": "rimraf .next out"
+    "clean": "rimraf .next out",
+    "ci:local": "act pull_request",
+    "ci:check": "act -j check --container-architecture linux/amd64",
+    "ci": "nr ci:local --container-architecture linux/amd64"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
