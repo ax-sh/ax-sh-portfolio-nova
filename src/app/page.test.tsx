@@ -11,9 +11,12 @@ test('adds 1 + 2 to equal 3', async () => {
 });
 
 describe('Home Profile Page', () => {
-  it('Should return the home page', () => {
-    const ele = render(<Home />);
-    expect(ele.getByRole('button')).toBeInTheDocument();
+  it('Should test the home page header', () => {
+    render(<Home />);
+    const header = screen.getByRole('heading', {
+      name: /axmin shrestha/i,
+    });
+    expect(header).toBeInTheDocument();
     screen.logTestingPlaygroundURL();
     // screen.debug();
     // expect(e).tobeInThe(3);
