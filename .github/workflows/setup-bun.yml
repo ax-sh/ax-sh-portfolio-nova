@@ -1,5 +1,7 @@
 name: setup-bun
 
+env:
+  PACKAGE_MANAGER: bun
 on:
   workflow_call:  # Allows this workflow to be called from another workflow
   pull_request:
@@ -12,5 +14,32 @@ jobs:
     steps:
       - name: 🛎️Checkout
         uses: actions/checkout@v4
-      - name: Setup Bun.js ⚙️
+        with:
+          fetch-depth: 0
+      - name: 🔧 Setup Bun.js
         uses: oven-sh/setup-bun@v2
+      - name: Export Bun Path
+        run: echo "export PATH=$PATH:~/.bun/bin" >> $GITHUB_ENV
+  install-bun-with-cache:
+    needs: [ install-bun ]
+    runs-on: ubuntu-latest
+    steps:
+#      - name: Show Env
+#        # run: echo "Env ${{ env.ENV_ID }}
+#        run: echo "Env for ci website pr"
+#      - name: lint
+#        run: bun lint
+#        ------
+      - name: 💾 Restore Dependency Cache
+        uses: actions/cache@v4
+        id: cache
+#        with:
+#          path: |
+#            ~/.bun/install/cache
+#            .next/cache
+#            node_modules
+#        key: |
+#          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/bun.lockb') }}
+#        restore-keys: |
+#          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-
+
