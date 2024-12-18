@@ -1,3 +1,4 @@
+import { ErrorMessage } from '@hookform/error-message';
 import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
 import type { ComponentPropsWithRef, InputHTMLAttributes } from 'react';
@@ -48,13 +49,16 @@ export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormD
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
-    mode: 'onBlur', // Validate on field blur
+    mode: 'onBlur', // Validate on field blur/not focused
   });
 
   // console.log(watch('email')); // watch input value by passing the name of it
   // console.log(Object.values(errors).map((i) => i.message));
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={'flex flex-col gap-2'}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={'flex flex-col gap-2 [&>label>span]:text-foreground'}
+    >
       {/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
       <label className='text-sm font-medium text-gray-700 flex flex-col gap-2'>
         <span>Name</span>
@@ -63,7 +67,11 @@ export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormD
           {...register('name')}
           className={clsx(errors.name ? 'border-red-500' : 'border-gray-300')}
         />
-        {errors.name && <span className={'text-red-500'}>{errors.name.message}</span>}
+        <ErrorMessage
+          errors={errors}
+          name='name'
+          render={({ message }) => <p className={'text-red-500'}>{message}</p>}
+        />
       </label>
 
       {/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
@@ -76,7 +84,11 @@ export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormD
           {...register('email')}
           className={clsx(errors.email ? 'border-red-500' : 'border-gray-300')}
         />
-        {errors.email && <span className={'text-red-500'}>{errors.email.message}</span>}
+        <ErrorMessage
+          errors={errors}
+          name='email'
+          render={({ message }) => <p className={'text-red-500'}>{message}</p>}
+        />
       </label>
       {/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
       <label className='text-sm font-medium text-gray-700 flex flex-col gap-2'>
@@ -87,7 +99,11 @@ export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormD
           placeholder={'Message'}
           className={clsx(errors.message ? 'border-red-500' : 'border-gray-300')}
         />
-        {errors.message && <span className={'text-red-500'}>{errors.message.message}</span>}
+        <ErrorMessage
+          errors={errors}
+          name='message'
+          render={({ message }) => <p className={'text-red-500'}>{message}</p>}
+        />
       </label>
 
       <button
