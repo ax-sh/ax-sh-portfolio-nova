@@ -7,7 +7,7 @@ function fetchProjects() {
       id: faker.internet.email(),
       url: faker.internet.url(),
       color: faker.internet.color(),
-      image: faker.image.url(),
+      image: faker.image.url({ width: 500, height: 500 }),
       name: faker.internet.displayName(),
     };
   }
@@ -15,7 +15,7 @@ function fetchProjects() {
   return data;
 }
 
-export function useProjects() {
+export function useProjectsQuery() {
   // TODO make use of react query later for fetching
   const data = fetchProjects();
   return { data };
