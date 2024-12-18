@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  reactStrictMode: true,
+  devIndicators: { buildActivity: true, appIsrStatus: true },
 };
 
 export default nextConfig;
