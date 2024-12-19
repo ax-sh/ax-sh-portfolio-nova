@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run",
+    "test": "bun vitest run",
     "dev:turbo": "bun --bun run dev",
     "format": "nlx @biomejs/biome format --write ./src",
     "storybook": "storybook dev -p 6006",
@@ -20,7 +20,8 @@
     "clean": "rimraf .next out",
     "ci:local": "act pull_request",
     "ci:check": "act -j check --container-architecture linux/amd64",
-    "ci": "nr ci:local --container-architecture linux/amd64"
+    "ci": "nr ci:local --container-architecture linux/amd64",
+    "act": "act --container-architecture linux/amd64"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
@@ -82,5 +83,6 @@
     "workerDirectory": [
       "public"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
