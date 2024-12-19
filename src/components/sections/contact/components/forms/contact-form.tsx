@@ -1,18 +1,10 @@
 import { ErrorMessage } from '@hookform/error-message';
-import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
 import type { ComponentPropsWithRef, InputHTMLAttributes } from 'react';
 import React from 'react';
-import { type SubmitHandler, useForm } from 'react-hook-form';
-import { z } from 'zod';
+import type { SubmitHandler } from 'react-hook-form';
 
-const contactFormSchema = z.object({
-  name: z.string().min(1, 'Name is required'), // Non-empty string validation
-  email: z.string().min(1, 'Email is required').email('Invalid email address'), // Email validation
-  message: z.string().min(1, 'Message is required'), // Non-empty string validation
-});
-
-export type ContactFormData = z.infer<typeof contactFormSchema>;
+import { type ContactFormData, useContactForm } from './use-contact-form';
 
 // eslint-disable-next-line react/display-name
 const TextField = React.forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>(
@@ -43,14 +35,7 @@ const TextAreaField = React.forwardRef<HTMLTextAreaElement, ComponentPropsWithRe
 TextAreaField.displayName = 'Textarea';
 
 export function ContactForm({ onSubmit }: { onSubmit: SubmitHandler<ContactFormData> }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    mode: 'onBlur', // Validate on field blur/not focused
-  });
+  const { register, handleSubmit, errors, isSubmitting } = useContactForm();
 
   // console.log(watch('email')); // watch input value by passing the name of it
   // console.log(Object.values(errors).map((i) => i.message));
