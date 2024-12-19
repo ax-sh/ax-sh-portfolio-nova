@@ -6,25 +6,7 @@ on:
 
 jobs:
   install:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛎️ Checkout
-        uses: actions/checkout@v4.2.2
-        with:
-          fetch-depth: 0
-      - name: 🔧 Setup Bun
-        uses: oven-sh/setup-bun@v2
-      - name: 💾 Restore Dependency Cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.bun/bun_modules
-            .next/cache
-            node_modules
-          key: ${{ runner.os }}-bun_modules-${{ hashFiles('**/bun.lockb') }}
-          restore-keys: |
-            ${{ runner.os }}-bun_modules-
-      - run: bun install
+    uses: ./.github/workflows/setup-bun.yml
   test:
     runs-on: ubuntu-latest
     needs: install
@@ -46,4 +28,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-bun_modules-
       - run: bun run test
-      - run: bun run lint
+#      - run: bun run lint

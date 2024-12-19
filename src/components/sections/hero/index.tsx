@@ -1,5 +1,6 @@
 'use client';
 
+import { SpecializedStacks } from '@/components/sections/hero/specialized-stacks';
 import { ImageContain } from '@/ui';
 import clsx from 'clsx';
 import type { PropsWithChildren } from 'react';
@@ -57,8 +58,10 @@ export default function HeroSection() {
           'w-1/2 m-auto'
         )}
       >
-        <header>
+        <header className={clsx('prose prose-zinc prose-h2')}>
           <h1>Axmin Shrestha</h1>
+          <h2>Specialize in</h2>
+          <SpecializedStacks />
         </header>
       </article>
     </Hero>

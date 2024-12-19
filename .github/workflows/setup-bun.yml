@@ -9,37 +9,57 @@ on:
       - 'main'
 
 jobs:
-  install-bun:
+  install:
     runs-on: ubuntu-latest
     steps:
-      - name: 🛎️Checkout
-        uses: actions/checkout@v4
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
-      - name: 🔧 Setup Bun.js
+      - name: 🔧 Setup Bun
         uses: oven-sh/setup-bun@v2
-      - name: Export Bun Path
-        run: echo "export PATH=$PATH:~/.bun/bin" >> $GITHUB_ENV
-  install-bun-with-cache:
-    needs: [ install-bun ]
-    runs-on: ubuntu-latest
-    steps:
-#      - name: Show Env
-#        # run: echo "Env ${{ env.ENV_ID }}
-#        run: echo "Env for ci website pr"
-#      - name: lint
-#        run: bun lint
-#        ------
       - name: 💾 Restore Dependency Cache
         uses: actions/cache@v4
-        id: cache
+        with:
+          path: |
+            ~/.bun/bun_modules
+            .next/cache
+            node_modules
+          key: ${{ runner.os }}-bun_modules-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun_modules-
+      - run: bun install
+#  install-bun:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: 🛎️Checkout
+#        uses: actions/checkout@v4
 #        with:
-#          path: |
-#            ~/.bun/install/cache
-#            .next/cache
-#            node_modules
-#        key: |
-#          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/bun.lockb') }}
-#        restore-keys: |
-#          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-
-
+#          fetch-depth: 0
+#      - name: 🔧 Setup Bun.js
+#        uses: oven-sh/setup-bun@v2
+#      - name: Export Bun Path
+#        run: echo "export PATH=$PATH:~/.bun/bin" >> $GITHUB_ENV
+#  install-bun-with-cache:
+#    needs: [ install-bun ]
+#    runs-on: ubuntu-latest
+#    steps:
+##      - name: Show Env
+##        # run: echo "Env ${{ env.ENV_ID }}
+##        run: echo "Env for ci website pr"
+##      - name: lint
+##        run: bun lint
+##        ------
+#      - name: 💾 Restore Dependency Cache
+#        uses: actions/cache@v4
+#        id: cache
+##        with:
+##          path: |
+##            ~/.bun/install/cache
+##            .next/cache
+##            node_modules
+##        key: |
+##          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/bun.lockb') }}
+##        restore-keys: |
+##          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-
+#
