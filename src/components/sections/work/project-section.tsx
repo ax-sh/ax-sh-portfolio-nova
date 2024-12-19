@@ -13,6 +13,7 @@ function ProjectCard({ color, image, name, ...rest }: ProjectProps) {
       }
       style={{ backgroundColor: color }}
     >
+      {/* eslint-disable @next/next/no-img-element */}
       <img
         src={image}
         alt={image}
