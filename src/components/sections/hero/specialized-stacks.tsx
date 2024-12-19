@@ -13,44 +13,106 @@ import {
   DockerOriginalWordmark,
   FigmaOriginal,
   FlutterOriginal,
+  GitOriginalWordmark,
+  GithubOriginal,
+  GithubOriginalWordmark,
+  GithubactionsOriginal,
   GraphqlPlain,
+  InsomniaOriginal,
+  JiraOriginalWordmark,
+  JqueryOriginalWordmark,
+  JupyterOriginalWordmark,
+  NestjsOriginal,
+  NetlifyOriginalWordmark,
   NextjsOriginalWordmark,
   NextjsPlain,
+  NodejsOriginalWordmark,
+  P5jsOriginal,
+  PandasOriginalWordmark,
+  PlaywrightOriginal,
+  PostgresqlOriginal,
+  PrismaOriginal,
   ReactOriginalWordmark,
+  ReactrouterOriginal,
+  ReduxOriginal,
+  RustOriginal,
+  SanityOriginal,
+  SassOriginal,
+  SlackOriginal,
+  SqlalchemyPlainWordmark,
+  SqliteOriginalWordmark,
   StorybookOriginal,
+  StreamlitOriginalWordmark,
+  SupabaseOriginalWordmark,
   TailwindcssOriginal,
-  TypescriptOriginal,
+  ThreejsOriginalWordmark,
   VitestOriginal,
 } from 'devicons-react';
 
 export function SpecializedStacks() {
   return (
     <span className={'flex flex-wrap gap-2 [&>svg]:!h-10 [&>svg]:!w-10 '}>
-      <TypescriptOriginal />
+      {/*Base*/}
+      {/*<Html5OriginalWordmark />*/}
+      {/*<TypescriptOriginal />*/}
+      {/*<JavascriptOriginal />*/}
+      {/*<Css3OriginalWordmark />*/}
+      {/*<Css3PlainWordmark />*/}
+      <NodejsOriginalWordmark />
       <ReactOriginalWordmark />
+      {/*<ReactOriginal />*/}
+      {/*<SassOriginal />*/}
       <TailwindcssOriginal />
-      <AnacondaOriginal />
+      <ReduxOriginal />
+      {/*<ReactrouterOriginal />*/}
+      {/* Testing */}
       <VitestOriginal />
+      {/*<PuppeteerOriginal />*/}
+      <PlaywrightOriginal />
       <StorybookOriginal />
-      <GraphqlPlain />
-      <AmazonwebservicesOriginalWordmark />
-      <AndroidstudioOriginal />
-      <BlenderOriginal />
-      <BunOriginal />
-      <CodecovPlain />
-      <Css3OriginalWordmark />
-      <Css3PlainWordmark />
-      <D3jsOriginal />
-      <DartOriginalWordmark />
-      <DockerOriginal />
+      {/*<DockerOriginal />*/}
       <DockerOriginalWordmark />
-      <FigmaOriginal />
-      <FlutterOriginal />
-
-      <span className={'p-3 rounded bg-white [&>svg]:!h-10 [&>svg]:!w-10 flex gap-2'}>
-        <NextjsOriginalWordmark />
-        <NextjsPlain />
-      </span>
+      <AmazonwebservicesOriginalWordmark />
+      {/*<div className={'w-full'}></div>*/}
+      {/*/!* Database*!/*/}
+      {/*<PostgresqlOriginal />*/}
+      {/*<PrismaOriginal />*/}
+      {/*<ThreejsOriginalWordmark />*/}
+      {/*<SupabaseOriginalWordmark />*/}
+      {/*/!*Content management*!/*/}
+      {/*<SanityOriginal />*/}
+      {/*<SlackOriginal />*/}
+      {/*<GraphqlPlain />*/}
+      {/*<SqlalchemyPlainWordmark />*/}
+      {/*<SqliteOriginalWordmark />*/}
+      {/*<StreamlitOriginalWordmark />*/}
+      {/*<JiraOriginalWordmark />*/}
+      {/*<JqueryOriginalWordmark />*/}
+      {/*<span className={'p-3 rounded-md bg-white [&>svg]:!h-10 [&>svg]:!w-10 flex gap-2'}>*/}
+      {/*  <NextjsOriginalWordmark />*/}
+      {/*  <NextjsPlain />*/}
+      {/*  <RustOriginal />*/}
+      {/*</span>*/}
+      {/*/!* Un perfected *!/*/}
+      {/*<AnacondaOriginal />*/}
+      {/*<PandasOriginalWordmark />*/}
+      {/*<P5jsOriginal />*/}
+      {/*<NetlifyOriginalWordmark />*/}
+      {/*<NestjsOriginal />*/}
+      {/*<JupyterOriginalWordmark />*/}
+      {/*<InsomniaOriginal />*/}
+      {/*<AndroidstudioOriginal />*/}
+      {/*<BlenderOriginal />*/}
+      {/*<BunOriginal />*/}
+      {/*<CodecovPlain />*/}
+      {/*<D3jsOriginal />*/}
+      {/*<DartOriginalWordmark />*/}
+      {/*<FigmaOriginal />*/}
+      {/*<FlutterOriginal />*/}
+      {/*<GitOriginalWordmark />*/}
+      {/*<GithubOriginal />*/}
+      {/*<GithubOriginalWordmark />*/}
+      {/*<GithubactionsOriginal />*/}
     </span>
   );
 }
