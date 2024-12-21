@@ -47,6 +47,18 @@ function Hero({ children }: PropsWithChildren) {
   );
 }
 
+function HireMeButton() {
+  return (
+    <a
+      className='rounded-xl no-underline font-black bg-accent p-4 text-xl text-center text-white hover:bg-[#17A84D] focus:outline-none focus:ring-4 focus:ring-[#A7E9FF] transition-transform transform hover:scale-105 active:scale-95'
+      href='mailto:a.test@test.co'
+      aria-label='Hire Me'
+    >
+      Work With Me
+    </a>
+  );
+}
+
 export default function HeroSection() {
   return (
     <Hero>
@@ -58,10 +70,13 @@ export default function HeroSection() {
           'w-1/2 m-auto'
         )}
       >
-        <header className={clsx('prose prose-zinc prose-h2')}>
+        <header className={clsx('prose prose-h2:text-foreground')}>
           <h1>Axmin Shrestha</h1>
           <h2>Specialize in</h2>
           <SpecializedStacks />
+          <div className={'mt-3 flex flex-col'}>
+            <HireMeButton />
+          </div>
         </header>
       </article>
     </Hero>

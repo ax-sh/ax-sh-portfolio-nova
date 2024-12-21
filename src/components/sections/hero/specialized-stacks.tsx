@@ -24,6 +24,7 @@ import {
   JupyterOriginalWordmark,
   NestjsOriginal,
   NetlifyOriginalWordmark,
+  NextjsOriginal,
   NextjsOriginalWordmark,
   NextjsPlain,
   NodejsOriginalWordmark,
@@ -32,6 +33,7 @@ import {
   PlaywrightOriginal,
   PostgresqlOriginal,
   PrismaOriginal,
+  ReactOriginal,
   ReactOriginalWordmark,
   ReactrouterOriginal,
   ReduxOriginal,
@@ -58,21 +60,23 @@ export function SpecializedStacks() {
       {/*<JavascriptOriginal />*/}
       {/*<Css3OriginalWordmark />*/}
       {/*<Css3PlainWordmark />*/}
-      <NodejsOriginalWordmark />
-      <ReactOriginalWordmark />
-      {/*<ReactOriginal />*/}
+      {/*<NodejsOriginalWordmark />*/}
+      <NextjsOriginal />
+      {/*<ReactOriginalWordmark />*/}
+      <ReactOriginal />
       {/*<SassOriginal />*/}
       <TailwindcssOriginal />
-      <ReduxOriginal />
+      {/*<ReduxOriginal />*/}
       {/*<ReactrouterOriginal />*/}
       {/* Testing */}
       <VitestOriginal />
+
       {/*<PuppeteerOriginal />*/}
       <PlaywrightOriginal />
       <StorybookOriginal />
       {/*<DockerOriginal />*/}
-      <DockerOriginalWordmark />
-      <AmazonwebservicesOriginalWordmark />
+      {/*<DockerOriginalWordmark />*/}
+      {/*<AmazonwebservicesOriginalWordmark />*/}
       {/*<div className={'w-full'}></div>*/}
       {/*/!* Database*!/*/}
       {/*<PostgresqlOriginal />*/}
