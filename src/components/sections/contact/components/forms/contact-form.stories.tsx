@@ -1,8 +1,9 @@
-import { ContactForm } from '@/components/sections/contact/components/forms/contact-form';
 import { CenterDecorator, withToast } from '@/ui/decorators';
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 import toast from 'react-hot-toast';
+
+import { ContactForm } from './contact-form';
 
 // Define metadata for the component
 const meta: Meta<typeof ContactForm> = {
