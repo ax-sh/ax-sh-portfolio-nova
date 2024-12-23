@@ -1,4 +1,4 @@
-async function generatePdf() {}
+import { generatePdf } from '@/services/pdf/index';
 
 describe('Portfolio Pdf', () => {
   it('should Generate pdf with playwright', async () => {
