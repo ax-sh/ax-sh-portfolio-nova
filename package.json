@@ -26,12 +26,15 @@
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.1",
+    "@sparticuz/chromium": "^131.0.1",
     "@storybook/react-vite": "^8.4.7",
     "@storybook/test-runner": "^0.20.1",
     "clsx": "^2.1.1",
     "devicons-react": "^1.4.0",
     "next": "15.1.1",
     "nextjs-google-analytics": "^2.3.7",
+    "playwright": "^1.49.1",
+    "playwright-core": "^1.49.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.1",
@@ -85,6 +88,5 @@
     "workerDirectory": [
       "public"
     ]
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  }
 }
