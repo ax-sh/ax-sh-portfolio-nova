@@ -26,6 +26,7 @@
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.1",
+    "@playwright/test": "^1.49.1",
     "@sparticuz/chromium": "^131.0.1",
     "@storybook/react-vite": "^8.4.7",
     "@storybook/test-runner": "^0.20.1",
