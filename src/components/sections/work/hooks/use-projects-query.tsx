@@ -1,6 +1,12 @@
 import { faker } from '@faker-js/faker/locale/ar';
 
-export type ProjectProps = { id: string; url: string; color: string; image: string; name: string };
+export type ProjectProps = {
+  id: string;
+  url: string;
+  color: string;
+  image: string;
+  name: string;
+};
 function gen() {
   return {
     id: faker.internet.email(),
