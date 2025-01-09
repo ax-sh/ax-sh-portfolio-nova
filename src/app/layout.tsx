@@ -20,15 +20,17 @@ const JosefinFont = Josefin_Sans({
   weight: ['100', '200', '300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
+
 export const metadata: Metadata = {
-  title: 'Portfolio Next App',
-  description: 'Portfolio nova',
+  title: 'Axmin Shrestha | Portfolio',
+  description:
+    "Axmin Shrestha's Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies",
 };
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang='en'>
-      <body className={`${JosefinFont.className}  antialiased`}>
+      <body className={`${JosefinFont.className} antialiased`}>
         <Layout>
           <Toaster />
           {children}

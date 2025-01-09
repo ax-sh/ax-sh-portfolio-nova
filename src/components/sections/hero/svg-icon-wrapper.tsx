@@ -43,7 +43,6 @@ export function SvgIconWrapper({ children, size }: React.PropsWithChildren<SvgIc
                 key: `svg-icon-${index}`,
                 'aria-label': nameFromProps,
                 role: 'img',
-
                 className: "before:block before:content-[attr(data-tip)] before:content-['dd']",
                 size,
               })}
