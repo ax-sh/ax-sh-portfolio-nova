@@ -9,7 +9,7 @@ describe('Home Profile Page', () => {
       name: /axmin shrestha/i,
     });
     expect(header).toBeInTheDocument();
-    screen.logTestingPlaygroundURL();
+    // screen.logTestingPlaygroundURL();
     // screen.debug();
   });
 });
