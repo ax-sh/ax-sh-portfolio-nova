@@ -78,8 +78,16 @@ export default function HeroSection() {
           'w-1/2 m-auto'
         )}
       >
-        <header className={clsx('prose prose-h2:text-foreground')}>
+        <header
+          className={clsx(
+            'prose prose-h2:text-foreground prose-h1:my-2 prose-p:m-1 prose-p:text-white'
+          )}
+        >
           <h1>Axmin Shrestha</h1>
+          <p>
+            I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity,
+            And Utility.
+          </p>
 
           <SpecializedStacks />
           <div className={'mt-3 flex items-center gap-4'}>
