@@ -13,7 +13,7 @@ import {
 export function SpecializedStacks() {
   return (
     <article>
-      <h2>Specialize in</h2>
+      <h2>I Specialize in</h2>
       <span
         className={clsx(
           'flex flex-wrap gap-2 pb-3'
