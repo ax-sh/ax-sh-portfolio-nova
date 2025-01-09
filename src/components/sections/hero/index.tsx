@@ -2,8 +2,10 @@
 
 import { SpecializedStacks } from '@/components/sections/hero/specialized-stacks';
 import { ImageContain } from '@/ui';
+import { GithubIcon } from '@storybook/icons';
 import clsx from 'clsx';
-import type { PropsWithChildren } from 'react';
+import { GithubOriginal, GithubOriginalWordmark } from 'devicons-react';
+import type { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 
 function HeroImage() {
   const className = clsx('card-fader');
@@ -47,10 +49,16 @@ function Hero({ children }: PropsWithChildren) {
   );
 }
 
-function HireMeButton() {
+function HireMeButton({ className }: Pick<ComponentPropsWithoutRef<'a'>, 'className'>) {
   return (
     <a
-      className='rounded-xl no-underline font-black bg-accent p-4 text-xl text-center text-white hover:bg-[#17A84D] focus:outline-none focus:ring-4 focus:ring-[#A7E9FF] transition-transform transform hover:scale-105 active:scale-95'
+      className={clsx(
+        'rounded-xl bg-accent p-4 ',
+        'no-underline font-black text-xl text-center text-white ',
+        'hover:bg-[#17A84D] focus:outline-none focus:ring-4 focus:ring-[#A7E9FF]',
+        'transition-transform transform hover:scale-105 active:scale-95',
+        className
+      )}
       href='mailto:a.test@test.co'
       aria-label='Hire Me'
     >
@@ -72,10 +80,11 @@ export default function HeroSection() {
       >
         <header className={clsx('prose prose-h2:text-foreground')}>
           <h1>Axmin Shrestha</h1>
-          <h2>Specialize in</h2>
+
           <SpecializedStacks />
-          <div className={'mt-3 flex flex-col'}>
-            <HireMeButton />
+          <div className={'mt-3 flex items-center gap-2'}>
+            <HireMeButton className={'flex-grow'} />
+            <GithubIcon size={36} color={'#fff'} />
           </div>
         </header>
       </article>
