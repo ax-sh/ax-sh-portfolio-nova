@@ -38,6 +38,9 @@ function HeroNew() {
 const meta: Meta<typeof HeroNew> = {
   title: 'Sections/Hero', // Title path in Storybook
   component: HeroNew, // Link the component to the story
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 export default meta;

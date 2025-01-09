@@ -32,7 +32,9 @@ export function Hero({ children }: PropsWithChildren) {
         'flex-col-reverse md:flex-row duration-150 max-w-screen'
       )}
     >
-      <div className={clsx('relative grow shrink-0 basis-1/2')}>{/*<HeroImage />*/}</div>
+      <div className={clsx('relative grow shrink-0 basis-1/2')}>
+        <HeroImage />
+      </div>
       <div
         // stretched container
         className={clsx(
