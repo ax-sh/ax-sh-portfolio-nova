@@ -5,7 +5,7 @@ import {
 import clsx from 'clsx';
 
 function ProjectCard({ color, image, name, ...rest }: ProjectProps) {
-  console.log('ProjectCard', rest);
+  // console.log('ProjectCard', rest);
   return (
     <article
       className={

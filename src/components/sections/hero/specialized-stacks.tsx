@@ -1,54 +1,12 @@
+import { SvgIconWrapper } from '@/components/sections/hero/svg-icon-wrapper';
 import clsx from 'clsx';
 import {
-  AmazonwebservicesOriginalWordmark,
-  AnacondaOriginal,
-  AndroidstudioOriginal,
-  BlenderOriginal,
-  BunOriginal,
-  CodecovPlain,
-  Css3OriginalWordmark,
-  Css3PlainWordmark,
-  D3jsOriginal,
-  DartOriginalWordmark,
-  DockerOriginal,
-  DockerOriginalWordmark,
-  FigmaOriginal,
-  FlutterOriginal,
-  GitOriginalWordmark,
-  GithubOriginal,
-  GithubOriginalWordmark,
-  GithubactionsOriginal,
-  GraphqlPlain,
-  InsomniaOriginal,
-  JiraOriginalWordmark,
-  JqueryOriginalWordmark,
-  JupyterOriginalWordmark,
-  NestjsOriginal,
-  NetlifyOriginalWordmark,
   NextjsOriginal,
-  NextjsOriginalWordmark,
-  NextjsPlain,
-  NodejsOriginalWordmark,
-  P5jsOriginal,
-  PandasOriginalWordmark,
   PlaywrightOriginal,
-  PostgresqlOriginal,
-  PrismaOriginal,
   ReactOriginal,
-  ReactOriginalWordmark,
-  ReactrouterOriginal,
-  ReduxOriginal,
-  RustOriginal,
-  SanityOriginal,
-  SassOriginal,
-  SlackOriginal,
-  SqlalchemyPlainWordmark,
-  SqliteOriginalWordmark,
   StorybookOriginal,
-  StreamlitOriginalWordmark,
-  SupabaseOriginalWordmark,
   TailwindcssOriginal,
-  ThreejsOriginalWordmark,
+  TypescriptOriginal,
   VitestOriginal,
 } from 'devicons-react';
 
@@ -56,7 +14,12 @@ export function SpecializedStacks() {
   return (
     <article>
       <h2>Specialize in</h2>
-      <span className={clsx('flex flex-wrap gap-2 ', '[&>svg]:!h-10 [&>svg]:!w-10')}>
+      <span
+        className={clsx(
+          'flex flex-wrap gap-2 pb-3'
+          // '[&>svg]:!h-10 [&>svg]:!w-10'
+        )}
+      >
         {/*Base*/}
         {/*<Html5OriginalWordmark />*/}
         {/*<TypescriptOriginal />*/}
@@ -64,19 +27,26 @@ export function SpecializedStacks() {
         {/*<Css3OriginalWordmark />*/}
         {/*<Css3PlainWordmark />*/}
         {/*<NodejsOriginalWordmark />*/}
-        <NextjsOriginal />
+        <SvgIconWrapper size={32}>
+          <TypescriptOriginal name={'Typescript'} />
+          <NextjsOriginal name={'Next.js'} />
+          <ReactOriginal name={'React.js'} />
+          <TailwindcssOriginal name={'Tailwind.css'} />
+          <VitestOriginal name='Vitest(Jest)' />
+          <PlaywrightOriginal name={'Playwright(e2e)'} />
+          <StorybookOriginal name={'Storybook(Design System)'} />
+        </SvgIconWrapper>
+
         {/*<ReactOriginalWordmark />*/}
-        <ReactOriginal />
+
         {/*<SassOriginal />*/}
-        <TailwindcssOriginal />
+
         {/*<ReduxOriginal />*/}
         {/*<ReactrouterOriginal />*/}
         {/* Testing */}
-        <VitestOriginal />
 
         {/*<PuppeteerOriginal />*/}
-        <PlaywrightOriginal />
-        <StorybookOriginal />
+
         {/*<DockerOriginal />*/}
         {/*<DockerOriginalWordmark />*/}
         {/*<AmazonwebservicesOriginalWordmark />*/}

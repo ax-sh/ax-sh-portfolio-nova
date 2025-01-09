@@ -82,9 +82,9 @@ export default function HeroSection() {
           <h1>Axmin Shrestha</h1>
 
           <SpecializedStacks />
-          <div className={'mt-3 flex items-center gap-2'}>
-            <HireMeButton className={'flex-grow'} />
+          <div className={'mt-3 flex items-center gap-4'}>
             <GithubIcon size={36} color={'#fff'} />
+            <HireMeButton className={'flex-grow'} />
           </div>
         </header>
       </article>
