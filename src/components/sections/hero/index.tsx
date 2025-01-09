@@ -78,8 +78,8 @@ function HeroInfoSection() {
         </h4>
         <p className={'text-base sm:text-lg text-gray-400 mt-2 '}>
           {/*Specializing In Simplicity, Aesthetics, Responsive Design, And Utility.*/}
-          Specializing in simplicity, aesthetics, and responsive design, I craft dynamic Websites
-          and Web Apps that combine beauty with functionality.
+          Specializing in simplicity, aesthetics, and responsive design, I make dynamic Websites and
+          Web Apps that combine beauty with functionality.
         </p>
         {/*<p className={'text-base sm:text-lg text-gray-400 mt-2 '}>*/}
         {/*  My mission is to deliver modern, user-friendly interfaces that engage audiences and drive*/}
@@ -93,15 +93,11 @@ function HeroInfoSection() {
             'mt-3 flex items-center gap-4 w-10/12 [&>a]:no-underline border-white/20 border-t py-4'
           }
         >
-          <a
-            href='https://github.com/yourusername'
-            aria-label='View my GitHub profile'
-            className='social-link'
-          >
+          <a href='https://github.com/' aria-label='View my GitHub profile' className='social-link'>
             <GithubOriginal className={'bg-white rounded-full'} size={36} />
           </a>
           <a
-            href='https://linkedin.com/in/yourusername'
+            href='https://linkedin.com/in/'
             aria-label='Connect with me on LinkedIn'
             className='social-link'
           >
