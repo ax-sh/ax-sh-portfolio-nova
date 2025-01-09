@@ -49,7 +49,7 @@ function Hero({ children }: PropsWithChildren) {
   );
 }
 
-function HireMeButton({ className }: Pick<ComponentPropsWithoutRef<'a'>, 'className'>) {
+function HireMeButton({ className, ...props }: ComponentPropsWithoutRef<'a'>) {
   return (
     <a
       className={clsx(
@@ -59,8 +59,7 @@ function HireMeButton({ className }: Pick<ComponentPropsWithoutRef<'a'>, 'classN
         'transition-transform transform hover:scale-105 active:scale-95',
         className
       )}
-      href='mailto:a.test@test.co'
-      aria-label='Hire Me'
+      {...props}
     >
       Work With Me
     </a>
@@ -70,17 +69,42 @@ function HireMeButton({ className }: Pick<ComponentPropsWithoutRef<'a'>, 'classN
 function HeroInfoSection() {
   return (
     <article className={'p-4 pt-10 md:pt-0 grid place-content-center prose flex-grow'}>
-      <header className='prose prose-xl prose-stone text-white prose-headings:text-green-500'>
-        <h1>Axmin Shrestha | Portfolio</h1>
-        <p>
+      <header className='prose prose-xl prose-stone text-white prose-h eadings:text-green-500 prose-headings:my-2'>
+        <h1 className={'text-5xl sm:text-6xl font-extrabold leading-tight text-green-500'}>
+          Axmin Shrestha
+        </h1>
+        <h4 className={'text-lg sm:text-xl font-medium text-gray-300 mt-4'}>
+          Full Stack developer
+        </h4>
+        <p className={'text-base sm:text-lg text-gray-400 mt-2'}>
           I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity, And
           Utility.
         </p>
         <SpecializedStacks />
-        <div className={'mt-3 flex items-center gap-4 w-10/12'}>
-          <HireMeButton className={'flex-grow'} />
-          <GithubIcon size={36} />
-          <LinkedinOriginal size={36} />
+        <div
+          className={
+            'mt-3 flex items-center gap-4 w-10/12 [&>a]:no-underline border-white/20 border-t py-4'
+          }
+        >
+          <a
+            href='https://github.com/yourusername'
+            aria-label='View my GitHub profile'
+            className='social-link'
+          >
+            <GithubOriginal className={'bg-white rounded-full'} size={36} />
+          </a>
+          <a
+            href='https://linkedin.com/in/yourusername'
+            aria-label='Connect with me on LinkedIn'
+            className='social-link'
+          >
+            <LinkedinOriginal size={36} />
+          </a>
+          <HireMeButton
+            className='flex-grow'
+            href='mailto:a.test@test.co'
+            aria-label='Contact me for work opportunities'
+          />
         </div>
       </header>
     </article>
