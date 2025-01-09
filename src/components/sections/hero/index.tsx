@@ -76,10 +76,17 @@ function HeroInfoSection() {
         <h4 className={'text-lg sm:text-xl font-medium text-gray-300 mt-4'}>
           Full Stack developer
         </h4>
-        <p className={'text-base sm:text-lg text-gray-400 mt-2'}>
-          I Develop Creative Websites. Specialize In Aesthetics, Responsive Design, Simplicity, And
-          Utility.
+        <p className={'text-base sm:text-lg text-gray-400 mt-2 '}>
+          {/*Specializing In Simplicity, Aesthetics, Responsive Design, And Utility.*/}
+          Specializing in simplicity, aesthetics, and responsive design, I craft dynamic Websites
+          and Web Apps that combine beauty with functionality.
         </p>
+        {/*<p className={'text-base sm:text-lg text-gray-400 mt-2 '}>*/}
+        {/*  My mission is to deliver modern, user-friendly interfaces that engage audiences and drive*/}
+        {/*  measurable results for businesses.*/}
+        {/*  /!*  I Develop Creative Websites. Delivering modern, user-friendly interfaces that drive*!/*/}
+        {/*  /!*  engagement and results.*!/*/}
+        {/*</p>*/}
         <SpecializedStacks />
         <div
           className={
@@ -115,6 +122,31 @@ export default function HeroSection() {
   return (
     <Hero>
       <HeroInfoSection />
+      {/*<section className='bg-black text-white p-8 sm:p-16'>*/}
+      {/*  <h1 className='text-5xl sm:text-6xl font-extrabold text-green-500 leading-tight'>*/}
+      {/*    Axmin Shrestha*/}
+      {/*  </h1>*/}
+      {/*  <p className='text-lg sm:text-xl font-medium text-gray-300 mt-4'>Full Stack Developer</p>*/}
+      {/*  <p className='text-base sm:text-lg text-gray-400 mt-2'>*/}
+      {/*    I develop creative websites. Specialize in aesthetics, responsive design, simplicity, and*/}
+      {/*    utility.*/}
+      {/*  </p>*/}
+      {/*  <h2 className='text-2xl sm:text-3xl font-bold text-green-400 mt-8'>I Specialize in</h2>*/}
+      {/*  <div className='flex flex-wrap gap-4 text-gray-400 text-base mt-4'>*/}
+      {/*    <span>TypeScript</span>*/}
+      {/*    <span>Next.js</span>*/}
+      {/*    <span>React</span>*/}
+      {/*    <span>TailwindCSS</span>*/}
+      {/*    <span>Vite</span>*/}
+      {/*    <span>Storybook</span>*/}
+      {/*  </div>*/}
+      {/*  <a*/}
+      {/*    href='#contact'*/}
+      {/*    className='mt-6 inline-block bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-6 py-3 rounded-lg shadow-md transition'*/}
+      {/*  >*/}
+      {/*    Work With Me*/}
+      {/*  </a>*/}
+      {/*</section>*/}
     </Hero>
   );
 }
