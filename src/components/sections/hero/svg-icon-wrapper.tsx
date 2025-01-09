@@ -8,6 +8,7 @@ interface SvgIconProps extends React.SVGProps<SVGElement> {
 function ToolTip({ children }: PropsWithChildren) {
   return (
     <span
+      role='tooltip'
       className={clsx(
         'group-hover:opacity-100 opacity-0 transition-opacity ',
         '-left-1/2 absolute px-1 mt-1',
@@ -26,7 +27,7 @@ export function SvgIconWrapper({ children, size }: React.PropsWithChildren<SvgIc
         if (React.isValidElement<SvgIconProps>(child)) {
           const nameFromProps = child.props.name ?? '';
           return (
-            <span
+            <div
               className={clsx(
                 'group relative cursor-pointer'
                 //   below works but has centering x-axis problem
@@ -40,12 +41,14 @@ export function SvgIconWrapper({ children, size }: React.PropsWithChildren<SvgIc
               {React.cloneElement(child, {
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key: `svg-icon-${index}`,
+                'aria-label': nameFromProps,
+                role: 'img',
 
-                className: 'pointer before:block h-30 w-30 before:content-[attr(data-tip)]',
+                className: "before:block before:content-[attr(data-tip)] before:content-['dd']",
                 size,
               })}
               <ToolTip>{nameFromProps}</ToolTip>
-            </span>
+            </div>
           );
         }
         return null;
