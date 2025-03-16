@@ -7,7 +7,7 @@ import type { KnipConfig } from 'knip';
  * To use: `bun knip`
  */
 const config: KnipConfig = {
-  ignore: ['src/services/pdf'],
+  ignore: ['src/services/pdf/**'],
   next: {
     entry: [
       'next.config.{js,ts,cjs,mjs}',

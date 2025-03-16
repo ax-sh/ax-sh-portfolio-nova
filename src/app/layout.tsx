@@ -1,6 +1,7 @@
 import { Analytics, Providers } from '@/app/providers';
 import Layout from '@/ui';
 import type { Metadata } from 'next';
+import { DefaultSeo } from 'next-seo';
 import { Josefin_Sans } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
 import { Toaster } from 'react-hot-toast';
@@ -22,15 +23,31 @@ const JosefinFont = Josefin_Sans({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Axmin Shrestha | Portfolio',
-  description:
-    "Axmin Shrestha's Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies",
-};
+// export const metadata: Metadata = {
+//   title: 'Axmin Shrestha | Portfolio',
+//   description:
+//     "Axmin Shrestha's Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies",
+//   openGraph: {
+//     images: ['/some-specific-page-image.jpg', ...previousImages],
+//   },
+// };
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang='en'>
+      <DefaultSeo
+        openGraph={{
+          type: 'website',
+          locale: 'en_IE',
+          url: 'https://www.url.ie/',
+          siteName: 'SiteName',
+        }}
+        twitter={{
+          handle: '@handle',
+          site: '@site',
+          cardType: 'summary_large_image',
+        }}
+      />
       <Analytics />
       <body className={`${JosefinFont.className} antialiased`}>
         <Layout>
