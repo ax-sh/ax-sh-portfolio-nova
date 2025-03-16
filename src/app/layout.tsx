@@ -1,7 +1,6 @@
 import { Analytics, Providers } from '@/app/providers';
 import Layout from '@/ui';
-import type { Metadata } from 'next';
-import { DefaultSeo } from 'next-seo';
+import { Metadata } from 'next';
 import { Josefin_Sans } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
 import { Toaster } from 'react-hot-toast';
@@ -23,31 +22,30 @@ const JosefinFont = Josefin_Sans({
   subsets: ['latin'],
 });
 
-// export const metadata: Metadata = {
-//   title: 'Axmin Shrestha | Portfolio',
-//   description:
-//     "Axmin Shrestha's Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies",
-//   openGraph: {
-//     images: ['/some-specific-page-image.jpg', ...previousImages],
-//   },
-// };
+export const metadata: Metadata = {
+  title: 'Axmin Shrestha | Portfolio',
+  authors: ['Axmin Shrestha'],
+  category: 'freelance',
+
+  description:
+    "Axmin Shrestha's Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies",
+  openGraph: {
+    images: [
+      // '/hero-image.svg',
+      'https://avatars.githubusercontent.com/u/56112475?v=4',
+    ],
+    siteName: 'https://ax-sh.github.io/',
+    url: 'https://ax-sh.github.io/',
+    locale: 'np',
+    type: 'website',
+    tags: ['freelancer', 'available for hire', 'freelance'],
+  },
+  twitter: { images: ['https://avatars.githubusercontent.com/u/56112475?v=4'] },
+};
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang='en'>
-      <DefaultSeo
-        openGraph={{
-          type: 'website',
-          locale: 'en_IE',
-          url: 'https://www.url.ie/',
-          siteName: 'SiteName',
-        }}
-        twitter={{
-          handle: '@handle',
-          site: '@site',
-          cardType: 'summary_large_image',
-        }}
-      />
       <Analytics />
       <body className={`${JosefinFont.className} antialiased`}>
         <Layout>
