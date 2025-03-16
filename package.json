@@ -23,7 +23,7 @@
     "ci": "nr ci:local --container-architecture linux/amd64",
     "act": "act --container-architecture linux/amd64",
     "up": "bun update --latest",
-    "check-meta": "bunx check-site-meta"
+    "check-meta": "bunx check-site-meta 3000"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
