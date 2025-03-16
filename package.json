@@ -23,6 +23,7 @@
     "ci": "nr ci:local --container-architecture linux/amd64",
     "act": "act --container-architecture linux/amd64",
     "up": "bun update --latest",
+    "upp": "bunx npm-check-updates -i",
     "check-meta": "bunx check-site-meta 3000"
   },
   "dependencies": {
