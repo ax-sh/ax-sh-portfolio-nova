@@ -11,7 +11,7 @@ function gen() {
   return {
     id: faker.internet.email(),
     url: faker.internet.url(),
-    color: faker.internet.color(),
+    color: faker.color.rgb(),
     image: faker.image.url({ width: 500, height: 500 }),
     name: faker.internet.displayName({ firstName: 'Jon', lastName: 'Doe' }),
   };
