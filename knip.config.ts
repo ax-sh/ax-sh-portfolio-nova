@@ -3,10 +3,11 @@ import type { KnipConfig } from 'knip';
 /**
  * knip is a tool for discovering dead code:
  * https://knip.dev/
- *
+ * https://knip.dev/reference/dynamic-configuration
  * To use: `bun knip`
  */
 const config: KnipConfig = {
+  ignore: ['src/services/pdf'],
   next: {
     entry: [
       'next.config.{js,ts,cjs,mjs}',

@@ -35,6 +35,8 @@
     "@storybook/react-vite": "^8.6.6",
     "@storybook/test-runner": "^0.22.0",
     "@tailwindcss/postcss": "^4.0.14",
+    "@tanstack/react-query": "^5.68.0",
+    "@tanstack/react-query-devtools": "^5.68.0",
     "clsx": "^2.1.1",
     "devicons-react": "^1.4.0",
     "next": "15.2.2",

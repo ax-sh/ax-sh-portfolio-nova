@@ -1,6 +1,7 @@
+import { Analytics, Providers } from '@/app/providers';
 import Layout from '@/ui';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Josefin_Sans } from 'next/font/google';
+import { Josefin_Sans } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
 import { Toaster } from 'react-hot-toast';
 
@@ -30,10 +31,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang='en'>
+      <Analytics />
       <body className={`${JosefinFont.className} antialiased`}>
         <Layout>
           <Toaster />
-          {children}
+          <Providers>{children}</Providers>
         </Layout>
       </body>
     </html>
