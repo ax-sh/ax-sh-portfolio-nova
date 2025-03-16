@@ -24,7 +24,8 @@
     "act": "act --container-architecture linux/amd64",
     "up": "bun update --latest",
     "upp": "bunx npm-check-updates -i",
-    "check-meta": "bunx check-site-meta 3000"
+    "check-meta": "bunx check-site-meta 3000",
+    "knip": "knip"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
@@ -75,6 +76,7 @@
     "git-cliff": "^2.8.0",
     "happy-dom": "^17.4.4",
     "is-ci": "^4.1.0",
+    "knip": "^5.46.0",
     "msw": "^2.7.3",
     "msw-storybook-addon": "^2.0.4",
     "postcss": "^8.5.3",
