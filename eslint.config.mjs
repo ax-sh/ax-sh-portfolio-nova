@@ -1,6 +1,8 @@
+// export default eslintConfig;
+import antfu from '@antfu/eslint-config';
 import { FlatCompat } from '@eslint/eslintrc';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import eslintPrettierWithPluginConfig from './eslint.prettier.config.mjs';
 
@@ -16,4 +18,20 @@ const eslintConfig = [
   ...eslintPrettierWithPluginConfig,
 ];
 
-export default eslintConfig;
+export default antfu(
+  {
+    extends: ['next/core-web-vitals', 'next/typescript'],
+    // react: true,
+    test: true,
+    lessOpinionated: true,
+    typescript: true,
+    formatters: { prettierOptions: { printWidth: 80 } },
+  },
+  // eslintConfig
+  {
+    // Without `files`, they are general rules for all files
+    rules: {
+      'style/semi': ['off', 'never'],
+    },
+  }
+);

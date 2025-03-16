@@ -1,7 +1,7 @@
-import react from '@vitejs/plugin-react';
+import type { UserWorkspaceConfig } from 'vitest/node';
 import path from 'node:path';
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
-import { UserWorkspaceConfig } from 'vitest/node';
 
 export default defineConfig(async () => {
   const tsconfigPaths = (await import('vite-tsconfig-paths')).default;
