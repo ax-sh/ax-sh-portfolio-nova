@@ -1,9 +1,9 @@
 'use client';
 
+import type { PropsWithChildren } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
-import type { PropsWithChildren } from 'react';
 import { useLayoutEffect, useState } from 'react';
 import { hotjar } from 'react-hotjar';
 
