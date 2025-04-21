@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Layout>;
 export const Primary: Story = {
   args: {
     children: (
-      <div className={'bg-red-100'}>
+      <div className="bg-red-100">
         <h1>Custom Title</h1>
         <p>Custom content inside the layout component.</p>
       </div>

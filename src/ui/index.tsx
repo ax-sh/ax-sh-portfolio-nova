@@ -1,6 +1,7 @@
-import { type ImageProps } from 'next/image';
+import type { ImageProps } from 'next/image';
+import type { PropsWithChildren } from 'react';
 import Image from 'next/image';
-import React, { type PropsWithChildren } from 'react';
+import React from 'react';
 
 export default function Layout({ children }: Readonly<PropsWithChildren>) {
   return <main>{children}</main>;
