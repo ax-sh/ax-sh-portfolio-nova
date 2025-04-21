@@ -9,13 +9,13 @@ export default function WorkSection() {
         'container mx-auto',
         // 'grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen ',
         'p-8 pb-20 gap-16 sm:p-20',
-        'font-[family-name:var(--font-geist-sans)]'
+        'font-[family-name:var(--font-geist-sans)]',
       )}
     >
       <ProjectSection />
-      <div className={'flex justify-end'}>
-        <a href={'https://ax-sh.github.io/portfolio/'} target={'_blank'} rel={'noreferrer'}>
-          <h6 className={'text-accent text-xl font-bold'}>See More</h6>
+      <div className="flex justify-end">
+        <a href="https://ax-sh.github.io/portfolio/" target="_blank" rel="noreferrer">
+          <h6 className="text-accent text-xl font-bold">See More</h6>
         </a>
       </div>
     </section>
