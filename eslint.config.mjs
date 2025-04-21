@@ -1,8 +1,8 @@
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 // export default eslintConfig;
 import antfu from '@antfu/eslint-config';
 import { FlatCompat } from '@eslint/eslintrc';
-import { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 import eslintPrettierWithPluginConfig from './eslint.prettier.config.mjs';
 
@@ -33,5 +33,5 @@ export default antfu(
     rules: {
       'style/semi': ['off', 'never'],
     },
-  }
+  },
 );

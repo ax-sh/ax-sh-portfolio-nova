@@ -1,8 +1,8 @@
+import type { Metadata } from 'next';
+import type { PropsWithChildren } from 'react';
 import { Analytics, Providers } from '@/app/providers';
 import Layout from '@/ui';
-import { Metadata } from 'next';
 import { Josefin_Sans } from 'next/font/google';
-import type { PropsWithChildren } from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import './globals.css';
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   category: 'freelance',
 
   description:
-    "Axmin Shrestha's Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies",
+    'Axmin Shrestha\'s Portfolio - Full Stack Developer specializing in TypeScript, Next.js, React, and modern web technologies',
   openGraph: {
     images: [
       // '/hero-image.svg',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <Analytics />
       <body className={`${JosefinFont.className} antialiased`}>
         <Layout>

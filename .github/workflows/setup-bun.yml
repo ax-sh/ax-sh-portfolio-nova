@@ -3,10 +3,10 @@ name: setup-bun
 env:
   PACKAGE_MANAGER: bun
 on:
-  workflow_call:  # Allows this workflow to be called from another workflow
+  workflow_call: # Allows this workflow to be called from another workflow
   pull_request:
     branches:
-      - 'main'
+      - main
 
 jobs:
   install:
@@ -44,22 +44,22 @@ jobs:
 #    needs: [ install-bun ]
 #    runs-on: ubuntu-latest
 #    steps:
-##      - name: Show Env
-##        # run: echo "Env ${{ env.ENV_ID }}
-##        run: echo "Env for ci website pr"
-##      - name: lint
-##        run: bun lint
-##        ------
+# #      - name: Show Env
+# #        # run: echo "Env ${{ env.ENV_ID }}
+# #        run: echo "Env for ci website pr"
+# #      - name: lint
+# #        run: bun lint
+# #        ------
 #      - name: 💾 Restore Dependency Cache
 #        uses: actions/cache@v4
 #        id: cache
-##        with:
-##          path: |
-##            ~/.bun/install/cache
-##            .next/cache
-##            node_modules
-##        key: |
-##          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/bun.lockb') }}
-##        restore-keys: |
-##          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-
+# #        with:
+# #          path: |
+# #            ~/.bun/install/cache
+# #            .next/cache
+# #            node_modules
+# #        key: |
+# #          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/bun.lockb') }}
+# #        restore-keys: |
+# #          ${{ runner.os }}-${{ env.PACKAGE_MANAGER }}-
 #
