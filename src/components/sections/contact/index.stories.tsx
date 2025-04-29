@@ -1,5 +1,5 @@
-import { CenterDecorator, withToast } from '@/ui/decorators';
 import type { Meta, StoryObj } from '@storybook/react';
+import { CenterDecorator, withToast } from '@/ui/decorators';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { ContactSection } from './index.js';
